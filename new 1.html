@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>مولّد أفكار المحتوى</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1d4ed8, #020617);
+    }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      color: #cbd5f5;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+    }
+    .card {
+      background: #020617;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 20px 40px rgba(15,23,42,0.8);
+      border: 1px solid #1e293b;
+    }
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #bfdbfe;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+    input, select, button, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+      border: 1px solid #1f2933;
+      padding: 0.6rem 0.8rem;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    input, select, textarea {
+      background: #020617;
+      color: #e5e7eb;
+    }
+    textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    button {
+      margin-top: 1rem;
+      background: linear-gradient(90deg, #2563eb, #4f46e5);
+      color: #f9fafb;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
+    }
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(37,99,235,0.5);
+      filter: brightness(1.05);
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+    .badge {
+      border-radius: 999px;
+      border: 1px solid #1e293b;
+      padding: 0.25rem 0.7rem;
+      background: rgba(15,23,42,0.8);
+    }
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .result-header h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #bfdbfe;
+    }
+    .small-btn {
+      width: auto;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      background: #111827;
+      border: 1px solid #1f2937;
+      box-shadow: none;
+    }
+    .small-btn:hover {
+      box-shadow: 0 6px 15px rgba(15,23,42,0.7);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+    a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>مولّد أفكار المحتوى</h1>
+    <p>أدخل مجالك والمنصة، وخذ أفكار جاهزة لمنشورات وفيديوهات في ثوانٍ.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="badge-row">
+        <span class="badge">بدون تسجيل</span>
+        <span class="badge">يدعم اللغة العربية</span>
+        <span class="badge">مناسب لإنستغرام، تيك توك، يوتيوب وأكثر</span>
+      </div>
+
+      <h2>أخبرنا عن المحتوى الذي تريد إنشاءه</h2>
+
+      <div class="grid">
+        <div>
+          <label for="niche">المجال / النيتش</label>
+          <input id="niche" placeholder="مثال: تسويق، طبخ صحي، برمجة للمبتدئين" />
+        </div>
+        <div>
+          <label for="platform">المنصة</label>
+          <select id="platform">
+            <option value="instagram">إنستغرام (بوست / ريلز)</option>
+            <option value="tiktok">تيك توك</option>
+            <option value="youtube">يوتيوب (فيديو / شورتس)</option>
+            <option value="podcast">بودكاست</option>
+            <option value="blog">مقال / مدونة</option>
+            <option value="general">عام (أي منصة)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:1rem;">
+        <div>
+          <label for="goal">هدف المحتوى</label>
+          <select id="goal">
+            <option value="awareness">جذب متابعين جدد (توعية)</option>
+            <option value="engagement">رفع التفاعل</option>
+            <option value="conversion">بيع منتج أو خدمة</option>
+            <option value="authority">بناء خبرة وثقة</option>
+          </select>
+        </div>
+        <div>
+          <label for="tone">أسلوب المحتوى</label>
+          <select id="tone">
+            <option value="simple">مبسّط وتعليمي</option>
+            <option value="story">قصصي وتجارب شخصية</option>
+            <option value="tips">نصائح وقوائم سريعة</option>
+            <option value="controversial">آراء جريئة / عكس الشائع</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generate">احصل على أفكار الآن</button>
+
+      <div class="result-header">
+        <h3>الأفكار المقترحة</h3>
+        <button class="small-btn" id="copyIdeas">نسخ كل الأفكار</button>
+      </div>
+      <textarea id="ideas" placeholder="ستظهر هنا 10 أفكار جاهزة للمحتوى يمكنك نسخها وتعديلها."></textarea>
+    </section>
+  </main>
+
+  <footer>
+    صُنع كمثال تعليمي لمولّد أفكار المحتوى. يمكنك تطويره وربطه بواجهة ذكاء اصطناعي لاحقاً.
+  </footer>
+
+  <script>
+    const ideasBox = document.getElementById("ideas");
+    const generateBtn = document.getElementById("generate");
+    const copyBtn = document.getElementById("copyIdeas");
+
+    const templates = [
+      "سجّل فيديو قصير تشرح فيه لـ{platform} أكبر خطأ يقع فيه المبتدئون في مجال {niche} وكيف يتجنبونه، مع دعوة لمتابعتك لمزيد من النصائح.",
+      "انشر منشوراً من نوع قبـل/بعد يوضح نتيجة حقيقية من تطبيق إحدى نصائح {niche}، واطلب من المتابعين مشاركة تجاربهم.",
+      "قدّم قائمة من 5 أخطاء شائعة في {niche} تمنع الناس من الوصول لنتائج، مع تصحيح بسيط لكل خطأ.",
+      "شارك قصة شخصية عن فشل أو موقف صعب مررت به في {niche} وما الدرس الذي خرجت به، واجعلها مرتبطة بهدف متابعيك.",
+      "اصنع محتوى على شكل 'خرافات vs حقائق' في {niche}، كل سلايد أو مقطع يوضح خرافة وحقيقتها.",
+      "قدّم تحدياً بسيطاً لمدة 3 أيام في {niche} يمكن للمتابع تطبيقه، وادعُه لمشاركة النتيجة معك في التعليقات أو الرسائل.",
+      "اصنع فيديو يقارن بين طريقتين/أداتين مشهورَتين في {niche}، ووضح متى تُستخدم كل واحدة ومن تناسب أكثر.",
+      "انشر 'روتين يومي' أو 'خلف الكواليس' يُظهر كيف تطبق أنت مبادئ {niche} في حياتك أو عملك.",
+      "اكتب منشوراً يجيب عن 3 أسئلة متكررة حول {niche} بنبرة بسيطة وعملية، وشجّع الجمهور على طرح المزيد من الأسئلة.",
+      "قدّم 'خطة خطوة بخطوة' للمبتدئين لبدء رحلتهم في {niche} خلال 7 أيام، مع نصيحة ذهبية في النهاية."
+    ];
+
+    function mapPlatformText(value) {
+      switch (value) {
+        case "instagram": return "إنستغرام";
+        case "tiktok": return "تيك توك";
+        case "youtube": return "يوتيوب";
+        case "podcast": return "البودكاست";
+        case "blog": return "المدونة";
+        default: return "منصتك المفضلة";
+      }
+    }
+
+    function prependByGoal(text, goal) {
+      if (goal === "awareness") {
+        return "هدف الفكرة: الوصول لجمهور جديد.\n" + text;
+      } else if (goal === "engagement") {
+        return "هدف الفكرة: زيادة التعليقات والمشاركات.\n" + text;
+      } else if (goal === "conversion") {
+        return "هدف الفكرة: توجيه المتابع لاتخاذ خطوة (شراء/حجز/تسجيل).\n" + text;
+      } else if (goal === "authority") {
+        return "هدف الفكرة: إظهار خبرتك وبناء الثقة.\n" + text;
+      }
+      return text;
+    }
+
+    function adaptByTone(text, tone) {
+      if (tone === "story") {
+        return text + "\n\n✦ جرّب فتح الفكرة بقصة قصيرة أو موقف شخصي لشد الانتباه.";
+      } else if (tone === "tips") {
+        return text + "\n\n✦ حوّل الفكرة إلى نقاط مرقّمة واضحة وسريعة القراءة.";
+      } else if (tone === "controversial") {
+        return text + "\n\n✦ ابدأ الفكرة برأي جريء أو جملة تخالف الشائع لكن بحدود الاحترام.";
+      }
+      return text;
+    }
+
+    generateBtn.addEventListener("click", () => {
+      const niche = document.getElementById("niche").value.trim() || "مجالك";
+      const platformValue = document.getElementById("platform").value;
+      const goal = document.getElementById("goal").value;
+      const tone = document.getElementById("tone").value;
+
+      const platformText = mapPlatformText(platformValue);
+
+      let shuffled = [...templates].sort(() => Math.random() - 0.5).slice(0, 10);
+
+      const ideas = shuffled.map((tpl, index) => {
+        let base = tpl
+          .replace("{niche}", niche)
+          .replace("{platform}", platformText);
+
+        base = prependByGoal(base, goal);
+        base = adaptByTone(base, tone);
+
+        return (index + 1) + "️⃣ " + base;
+      });
+
+      ideasBox.value = ideas.join("\n\n-------------------------\n\n");
+    });
+
+    copyBtn.addEventListener("click", async () => {
+      if (!ideasBox.value.trim()) {
+        alert("لا توجد أفكار بعد. اضغط على زر (احصل على أفكار الآن) أولاً.");
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(ideasBox.value);
+        copyBtn.textContent = "تم النسخ ✅";
+        setTimeout(() => (copyBtn.textContent = "نسخ كل الأفكار"), 2000);
+      } catch (e) {
+        alert("لا يمكن النسخ تلقائياً، يمكنك النسخ يدوياً من الصندوق.");
+      }
+    });
+  </script>
+</body>
+</html>
